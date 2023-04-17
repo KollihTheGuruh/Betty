@@ -3,7 +3,8 @@
 #include <string.h>
 #include <curl/curl.h>
 #include <libxml2/libxml/HTMLparser.h>
-#include <libxml2/libxml/xpath.h>
+#include "practice"
+//#includelibxml2/libxml/xpath.h
 
 #define MAX_GAMES 10
 #define MAX_NAME_LEN 20
@@ -13,7 +14,7 @@ struct Game {
     char away_team[MAX_NAME_LEN];
     int home_score;
     int away_score;
-}; // Missing semicolon at the end of struct definition
+} // Missing semicolon at the end of struct definition
 
 static size_t write_callback(char *ptr, size_t size, size_t nmemb, void *userdata) {
     xmlDocPtr doc = (xmlDocPtr)userdata;
@@ -109,10 +110,10 @@ for (int i = 0; i < game_count; i++) {
 }
 
 // Clean up resources
-xmlXPathFreeObject(xpath_obj);
-xmlXPathFreeContext(xpath_ctx);
-xmlFreeDoc(doc);
-curl_easy_cleanup(curl);
+//xmlXPathFreeObject(xpath_obj);
+//xmlXPathFreeContext(xpath_ctx);
+//xmlFreeDoc(doc);
+//curl_easy_cleanup(curl);
 
 return 0;
 }
