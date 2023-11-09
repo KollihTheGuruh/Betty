@@ -2,13 +2,15 @@
 body, h1, h2, ul, li, p {
     margin: 0;
     padding: 0;
+    text-align: center;
   }
+
   
   /* Global styles */
   body {
     font-family: "Arial", sans-serif;
     color: #fff;
-    background-color: #222;
+    background-color: rgb(26, 26, 100);
   }
   
   header {
