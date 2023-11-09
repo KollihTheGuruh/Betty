@@ -18,6 +18,25 @@ body, h1, h2, ul, li, p {
     padding: 20px 0;
   }
   
+  .compare-btn {
+    background-color: #ff9800; /* Example color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.compare-btn:hover {
+    background-color: #e68a00; /* Darker shade for hover effect */
+    color: white;
+}
+
   h1 {
     font-size: 36px;
     margin-top: 0;
