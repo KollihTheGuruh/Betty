@@ -1,15 +1,19 @@
 /* Reset some default styles */
+/* Global styles */
 body, h1, h2, ul, li, p {
   margin: 0;
   padding: 0;
   text-align: center;
 }
-
-/* Global styles */
 body {
   font-family: "Arial", sans-serif;
   color: #fff;
   background-color: rgb(26, 26, 100);
+  background-image: url('background.jpg');
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Keep the image fixed in place when scrolling */
 }
 
 header {
@@ -20,21 +24,22 @@ header {
 }
 
 .compare-btn {
-  background-color: #ff9800; /* Example color */
-  color: white;
-  border: none;
-  padding: 10px 20px;
+  background-color: #007bff; /* Bootstrap primary blue for example */
+  color: white; /* Text color set to white for better contrast */
+  border: 1px solid transparent; /* Add border to maintain structure */
+  padding: 5px 10px; /* Smaller padding than the Add to Cart button */
+  font-size: 14px; /* Smaller font size than the Add to Cart button */
+  margin: 2px; /* Optional: smaller margin */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 3px; /* Optional: you can adjust border-radius to your liking */
 }
 
 .compare-btn:hover {
-  background-color: #e68a00; /* Darker shade for hover effect */
+  background-color: #0056b3; /* A darker shade of blue for hover effect */
   color: white;
 }
 
