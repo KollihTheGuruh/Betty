@@ -1,23 +1,48 @@
 /* Reset some default styles */
+/* Global styles */
 body, h1, h2, ul, li, p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Global styles */
-  body {
-    font-family: "Arial", sans-serif;
-    color: #fff;
-    background-color: #222;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+body {
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  background-color: rgb(26, 26, 100);
+  background-image: url('background.jpg');
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Keep the image fixed in place when scrolling */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.compare-btn {
+  background-color: #007bff; /* Bootstrap primary blue for example */
+  color: white; /* Text color set to white for better contrast */
+  border: 1px solid transparent; /* Add border to maintain structure */
+  padding: 5px 10px; /* Smaller padding than the Add to Cart button */
+  font-size: 14px; /* Smaller font size than the Add to Cart button */
+  margin: 2px; /* Optional: smaller margin */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 3px; /* Optional: you can adjust border-radius to your liking */
+}
+
+.compare-btn:hover {
+  background-color: #0056b3; /* A darker shade of blue for hover effect */
+  color: white;
+}
+
   h1 {
     font-size: 36px;
     margin-top: 0;
@@ -97,7 +122,7 @@ body, h1, h2, ul, li, p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: 20px;
     /*overflow-x: auto;*/
   }
@@ -152,32 +177,32 @@ body, h1, h2, ul, li, p {
   
 /* Footer styles */
 footer {
-    background-color: #f8faf8;
-    color: #f10d0d;
-    text-align: center;
-    padding: 10px 0;
-    font-weight: bold;
+  background-color: #f8faf8;
+  color: #f10d0d;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
 }
 
 /* Social media styles */
 .social-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .social-media a {
-    text-decoration: none;
-    color: #05050c;
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
-    font-weight: bold;
+  text-decoration: none;
+  color: #05050c;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
 .social-media img {
-    width: 30px; /* Adjust the width as needed */
-    height: 30px; /* Adjust the height as needed */
-    margin-right: 1px;
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin-right: 10px; /* Space between icon and text */
 }
