@@ -35,7 +35,7 @@ header {
   display: inline-block;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 3px; /* Optional: you can adjust border-radius to your liking */
+  border-radius: 6px; /* Optional: you can adjust border-radius to your liking */
 }
 
 .compare-btn:hover {
@@ -127,6 +127,87 @@ header {
     /*overflow-x: auto;*/
   }
   
+  .carousel {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.active {
+  display: block;
+}
+
+img {
+  width: 50%;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.slide:hover .overlay {
+  opacity: 1;
+}
+
+.specs {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.compare {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.active {
+    display: block;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
   .product {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -177,7 +258,7 @@ header {
   
 /* Footer styles */
 footer {
-  background-color: #f8faf8;
+  background-color: rgb(143, 183, 216);
   color: #f10d0d;
   text-align: center;
   padding: 10px 0;
