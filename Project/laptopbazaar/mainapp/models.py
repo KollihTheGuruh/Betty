@@ -35,6 +35,12 @@ class Customer(models.Model):
     def __str__(self):
         return self.user.username
 
+class LaptopModel(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
 # Laptop Model
 class Laptop(models.Model):
     brand = models.CharField(max_length=100)
@@ -62,7 +68,7 @@ class Laptop(models.Model):
     warranty = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.brand + ' ' + self.model
+                return f"{self.brand} Laptop - Price: ${self.price}, Processor: {self.processor}, Graphics Card: {self.graphics_card}, RAM: {self.ram}GB, Storage: {self.storage}, Display: {self.display}, Battery Life: {self.battery_life}, Operating System: {self.operating_system}"
 
 # Order Model
 class Order(models.Model):
