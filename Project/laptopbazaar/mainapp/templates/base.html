@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Bazaar</title>
+    <!-- Replace with your stylesheet's path -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Add any other meta tags, stylesheets, or head content here -->
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Navigation bar content -->
+            <div class="logo">
+                <a href="{% url 'index' %}">Laptop Bazaar</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'product_view' %}">Shop</a></li>
+                <!-- Add other navigation links as needed -->
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'dashboard_view' %}">Dashboard</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login_view' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Main content will be inserted here by child templates -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; {{ year }} Laptop Bazaar. All rights reserved.</p>
+    </footer>
+
+    <!-- Replace with your script's path -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- Add any other scripts here -->
+</body>
+</html>
