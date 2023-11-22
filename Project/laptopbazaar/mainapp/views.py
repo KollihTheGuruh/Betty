@@ -3,6 +3,14 @@ from django.contrib.auth import authenticate, login, logout
 from .models import Laptop, User, Order
 # Add any other necessary imports
 
+def home_view(request):
+    # Add your view logic here
+    return render(request, 'index.html')
+
+def about_us_view(request):
+    # Your view logic here
+    return render(request, 'about_us.html')
+
 # Login View
 def login_view(request):
     if request.method == "POST":
