@@ -9,5 +9,8 @@ urlpatterns = [
     path('compare/', views.compare_view, name='compare_view'),
     path('checkout/', views.checkout_view, name='checkout_view'),
     path('payment/', views.payment_view, name='payment_view'),
+    path('login/', views.login_view, name='login'),
+    path('register/', views.register_view, name='register'),
+
     # Add other URL patterns as needed
 ]

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from mainapp.forms.registration_form import RegistrationForm
 from .models import Laptop, User, Order
 # Add any other necessary imports
 
@@ -11,6 +12,25 @@ def about_us_view(request):
     # Your view logic here
     return render(request, 'about_us.html')
 
+def register_view(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            # Create a new user
+            username = form.cleaned_data['username']
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            user = User.objects.create_user(username=username, email=email, password=password)
+            
+            # Log in the user
+            login(request, user)
+            
+            # Redirect to a success page or home page
+            return redirect('home')  # Change 'home' to the name of your home page URL pattern
+    else:
+        form = RegistrationForm()
+
+    return render(request, 'registration/register.html', {'form': form})
 # Login View
 def login_view(request):
     if request.method == "POST":
