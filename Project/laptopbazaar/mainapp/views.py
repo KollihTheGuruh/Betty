@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import authenticate, login, logout
 from mainapp.forms.registration_form import RegistrationForm
 from .models import Laptop, User, Order
@@ -83,3 +83,10 @@ def payment_view(request):
         return redirect('success')
     else:
         return render(request, 'payment.html')
+    
+def laptop_detail(request, laptop_id):
+    # Retrieve the laptop object from the database using the laptop_id
+    laptop = get_object_or_404(Laptop, id=laptop_id)
+
+    # Render a template with the laptop details
+    return render(request, 'laptop_detail.html', {'laptop': laptop})

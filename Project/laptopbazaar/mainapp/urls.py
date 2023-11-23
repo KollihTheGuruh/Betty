@@ -11,6 +11,6 @@ urlpatterns = [
     path('payment/', views.payment_view, name='payment_view'),
     path('login/', views.login_view, name='login'),
     path('register/', views.register_view, name='register'),
-
+    path('laptop_detail/<int:laptop_id>/', views.laptop_detail, name='laptop_detail'),
     # Add other URL patterns as needed
 ]
