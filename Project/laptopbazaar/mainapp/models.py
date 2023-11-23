@@ -66,17 +66,23 @@ class Laptop(models.Model):
     optical_drive = models.CharField(max_length=100, null=True, blank=True)
     color_options = models.CharField(max_length=100)
     warranty = models.CharField(max_length=100)
-
+    images = models.ImageField(upload_to='laptop_images/', null=True, blank=True, verbose_name='Laptop Image')
     def __str__(self):
-                return f"{self.brand} Laptop - Price: ${self.price}, Processor: {self.processor}, Graphics Card: {self.graphics_card}, RAM: {self.ram}GB, Storage: {self.storage}, Display: {self.display}, Battery Life: {self.battery_life}, Operating System: {self.operating_system}"
+        return f"{self.brand} Laptop - Price: ${self.price}, Processor: {self.processor}, Graphics Card: {self.graphics_card}, RAM: {self.ram}GB, Storage: {self.storage}, Display: {self.display}, Battery Life: {self.battery_life}, Operating System: {self.operating_system}"
 
 # Order Model
 class Order(models.Model):
+    STATUS_CHOICES = (
+        ('Pending', 'Pending'),
+        ('Shipped', 'Shipped'),
+        ('Delivered', 'Delivered'),
+    )
+
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     laptop = models.ForeignKey(Laptop, on_delete=models.CASCADE)
     quantity = models.IntegerField()
     order_date = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=100, default='Pending')
+    status = models.CharField(max_length=100, choices=STATUS_CHOICES, default='Pending', verbose_name='Order Status')
 
     def __str__(self):
         return f'Order {self.id} by {self.customer}'
