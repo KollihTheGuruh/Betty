@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sticky-header {
+    background-color: #080808c9;
+    color: #270000;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .content {
+    padding: 100px 20px; /* To create space below the sticky header */
+  }
+  
+  
