@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    margin: 0;
+}
+
+.tree {
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+
+.trunk {
+    width: 40px;
+    height: 80px;
+    background-color: #8B4513;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 20px);
+    z-index: 2;
+}
+
+.foliage {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 80px;
+    left: calc(50% - 100px);
+    z-index: 1;
+}
+
+.layer {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    background-color: #228B22;
+    border-radius: 0 0 100px 100px;
+}
+
+.layer1 { top: -40px; left: -100px; transform: rotate(0deg); }
+.layer2 { top: -80px; left: 0; transform: rotate(60deg); }
+.layer3 { top: -80px; left: 100px; transform: rotate(120deg); }
+.layer4 { top: -40px; left: 100px; transform: rotate(180deg); }
+.layer5 { top: 0; left: 0; transform: rotate(240deg); }
+/* Add more layers and styles for a more detailed tree */
